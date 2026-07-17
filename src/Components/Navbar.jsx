@@ -1,10 +1,10 @@
 import { useState } from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import { FaBars, FaTimes, FaDumbbell } from "react-icons/fa";
 import "./Navbar.css";
 
 const Navbar = () => {
-
+  const navigate = useNavigate()
   const [open, setOpen] = useState(false);
 
   const closeMenu = () => setOpen(false);
@@ -92,7 +92,7 @@ const Navbar = () => {
       <NavLink
         to="/exercises"
         className="join-btn"
-        onClick={closeMenu}
+        onClick={() => navigate('/exercises')}
       >
         Explore Exercises
       </NavLink>
