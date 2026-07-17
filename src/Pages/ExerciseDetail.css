@@ -1,0 +1,189 @@
+.detail-page{
+
+    min-height:100vh;
+
+    padding:120px 7% 80px;
+
+    background:#070B14;
+}
+
+.back-btn{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    padding:12px 22px;
+
+    margin-bottom:45px;
+
+    text-decoration:none;
+
+    color:white;
+
+    border-radius:15px;
+
+    background:#101827;
+
+    transition:.35s;
+
+    border:1px solid rgba(255,255,255,.08);
+}
+
+.back-btn:hover{
+
+    background:#1E88FF;
+
+    transform:translateY(-3px);
+}
+
+.detail-container{
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:60px;
+
+    align-items:center;
+}
+
+.detail-image{
+
+    background:#101827;
+
+    border-radius:28px;
+
+    overflow:hidden;
+
+    border:1px solid rgba(255,255,255,.08);
+
+    box-shadow:0 0 40px rgba(30,136,255,.15);
+}
+
+.detail-image img{
+
+    width:100%;
+
+    display:block;
+}
+
+.detail-tag{
+
+    display:inline-block;
+
+    padding:8px 18px;
+
+    background:rgba(30,136,255,.15);
+
+    color:#1E88FF;
+
+    border-radius:30px;
+
+    margin-bottom:18px;
+}
+
+.detail-content h1{
+
+    color:white;
+
+    font-size:3rem;
+
+    text-transform:capitalize;
+
+    margin-bottom:20px;
+}
+
+.detail-description{
+
+    color:#9AA8C5;
+
+    line-height:1.8;
+
+    margin-bottom:35px;
+}
+
+.info-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:20px;
+}
+
+.info-card{
+
+    background:#101827;
+
+    padding:25px;
+
+    border-radius:20px;
+
+    border:1px solid rgba(255,255,255,.06);
+
+    transition:.35s;
+}
+
+.info-card:hover{
+
+    border-color:#1E88FF;
+
+    transform:translateY(-6px);
+
+    box-shadow:0 0 25px rgba(30,136,255,.25);
+}
+
+.info-card h4{
+
+    color:#1E88FF;
+
+    margin-bottom:10px;
+}
+
+.info-card p{
+
+    color:white;
+
+    text-transform:capitalize;
+}
+
+@media(max-width:992px){
+
+.detail-container{
+
+    grid-template-columns:1fr;
+}
+
+.detail-content h1{
+
+    font-size:2.3rem;
+}
+
+}
+
+@media(max-width:576px){
+
+.detail-page{
+
+    padding:100px 20px 60px;
+}
+
+.detail-content h1{
+
+    font-size:2rem;
+}
+
+.info-grid{
+
+    grid-template-columns:1fr;
+}
+
+.back-btn{
+
+    width:100%;
+
+    justify-content:center;
+}
+
+}
