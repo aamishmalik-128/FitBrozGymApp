@@ -12,10 +12,11 @@ const Home =  ({ exerciseData, setExerciseData }) => {
         <SearchExercises
                 setExerciseData={setExerciseData}
             />
-        <Statistics/>
+        
         <Exercises
                 exercises={exerciseData}
             />
+        <Statistics/>
         <Footer/>
     </Box>
   )

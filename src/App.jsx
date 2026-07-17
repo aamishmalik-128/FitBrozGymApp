@@ -10,6 +10,7 @@ import Statistics from './Components/Statistics'
 
 import Footer from './Components/Footer'
 import About from './Components/About'
+import HeroBanner from './Components/HeroBanner'
 const App = () => {
 
   const [exerciseData, setExerciseData] = useState(exercises);
@@ -39,7 +40,7 @@ const App = () => {
           }
 
         />
-
+        <Route path='/hero' element={<HeroBanner/>} />
         <Route
 
           path="/exercise/:id"

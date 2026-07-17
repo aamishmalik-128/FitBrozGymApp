@@ -1,7 +1,9 @@
 import "./HeroBanner.css";
 import herobanner from "../assets/herobanner.jpg";
 import { motion } from "framer-motion";
+import { useNavigate } from "react-router-dom";
 const HeroBanner = () => {
+  const navigate = useNavigate()
   return (
     <motion.section
     initial={{ opacity: 0, y: 80 }}
@@ -28,11 +30,11 @@ const HeroBanner = () => {
         </p>
 
         <div className="hero-buttons">
-          <button className="primary-btn">
+          <button className="primary-btn" onClick={() => navigate('/exercises')}>
             Start Training
           </button>
 
-          <button className="secondary-btn">
+          <button className="secondary-btn" onClick={() => navigate('/exercises')}>
             Explore Exercises
           </button>
         </div>
