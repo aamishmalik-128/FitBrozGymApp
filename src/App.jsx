@@ -1,53 +1,69 @@
 import React, { useState } from 'react'
-import {Box} from '@mui/material'
-import {Routes,Route} from 'react-router-dom'
+import { Box } from '@mui/material'
+import { Routes, Route } from 'react-router-dom'
 import Home from './Pages/Home'
 import ExerciseDetail from './Pages/ExerciseDetail'
 import exercises from "./data/exercises.json";
 import Navbar from './Components/Navbar'
+import Exercises from './Components/Exercises'
+import Statistics from './Components/Statistics'
+
+import Footer from './Components/Footer'
+import About from './Components/About'
 const App = () => {
 
-    const [exerciseData,setExerciseData] = useState(exercises);
+  const [exerciseData, setExerciseData] = useState(exercises);
 
-    return (
+  return (
 
-        <Box sx={{ width:"100%" }}>
+    <Box sx={{ width: "100%" }}>
 
-            <Navbar/>
+      <Navbar />
 
-            <Routes>
+      <Routes>
 
-                <Route
+        <Route
 
-                    path="/"
+          path="/"
 
-                    element={
+          element={
 
-                        <Home
+            <Home
 
-                            exerciseData={exerciseData}
+              exerciseData={exerciseData}
 
-                            setExerciseData={setExerciseData}
+              setExerciseData={setExerciseData}
 
-                        />
+            />
 
-                    }
+          }
 
-                />
+        />
 
-                <Route
+        <Route
 
-                    path="/exercise/:id"
+          path="/exercise/:id"
 
-                    element={<ExerciseDetail/>}
+          element={<ExerciseDetail />}
 
-                />
+        />
+        <Route path="/Statistics" element={<Statistics />} />
+<Route
+  path="/exercises"
+  element={
+    <Exercises exercises={exerciseData} />
+  }
+/>    
+        <Route 
+ path="/about" 
+ element={<About />} 
+/>
+        <Route path="/footer" element={<Footer />} /> 
+      </Routes>
 
-            </Routes>
+    </Box>
 
-        </Box>
-
-    );
+  );
 
 }
 export default App

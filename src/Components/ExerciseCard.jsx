@@ -13,7 +13,7 @@ const ExerciseCard = ({ exercise }) => {
         <div className="exercise-image">
 
           <img
-            src={exercise.image}
+            src={`/${exercise.image}`}
             alt={exercise.name}
           />
 

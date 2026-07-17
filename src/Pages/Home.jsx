@@ -3,7 +3,8 @@ import HeroBanner from '../Components/HeroBanner'
 import SearchExercises from '../Components/SearchExercises'
 import Exercises from '../Components/Exercises'
 import { Box } from '@mui/material'
-
+import Statistics from "../Components/Statistics";
+import Footer from '../Components/Footer'
 const Home =  ({ exerciseData, setExerciseData }) => {
   return (
     <Box>
@@ -11,9 +12,11 @@ const Home =  ({ exerciseData, setExerciseData }) => {
         <SearchExercises
                 setExerciseData={setExerciseData}
             />
+        <Statistics/>
         <Exercises
                 exercises={exerciseData}
             />
+        <Footer/>
     </Box>
   )
 }

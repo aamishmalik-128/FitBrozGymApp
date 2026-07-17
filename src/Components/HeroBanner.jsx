@@ -1,9 +1,14 @@
 import "./HeroBanner.css";
 import herobanner from "../assets/herobanner.jpg";
-
+import { motion } from "framer-motion";
 const HeroBanner = () => {
   return (
-    <section className="hero">
+    <motion.section
+    initial={{ opacity: 0, y: 80 }}
+    animate={{ opacity: 1, y: 0 }}
+    transition={{ duration: 0.8 }}
+    className="hero"
+>
 
       <div className="hero-content">
 
@@ -40,7 +45,7 @@ const HeroBanner = () => {
 
       </div>
 
-    </section>
+    </motion.section>
   );
 };
 
